@@ -1,0 +1,126 @@
+.wrapper {
+  display: flex;
+  padding: 2rem 1rem;
+}
+.wrapper table {
+  flex: 1;
+}
+
+.wrapper thead,
+.wrapper tbody {
+  display: block;
+  width: 70vw;
+}
+
+.wrapper tr {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.wrapper td,
+.wrapper th {
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+}
+.wrapper td {
+  position: relative;
+}
+.wrapper td img {
+  object-fit: cover;
+}
+
+.wrapper tbody tr > :nth-child(2) {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.wrapper tbody tr > :nth-child(3) {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.wrapper aside {
+  background-color: var(--secondary);
+  height: 230px;
+  color: whitesmoke;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.wrapper aside > :nth-child(1) {
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+.wrapper aside > :last-child {
+  padding: 0.5rem 1.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: red;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .wrapper thead {
+    display: none;
+  }
+  .wrapper tbody {
+    width: 100vw;
+  }
+  .wrapper tr {
+    flex-direction: column;
+    width: 100%;
+  }
+  .wrapper td,
+  .wrapper th {
+    width: 100%;
+  }
+  .wrapper td img {
+    object-fit: contain;
+  }
+  .wrapper tr > *::before {
+    content: "";
+    display: inline-block;
+    color: black;
+    font-weight: 900;
+    padding-right: 10px;
+  }
+  .wrapper tr > :nth-child(1) {
+    height: 100px;
+  }
+  .wrapper tr > :nth-child(1)::before {
+    content: "Product : ";
+  }
+  .wrapper tr > :nth-child(2)::before {
+    content: "Name : ";
+  }
+
+  .wrapper tr > :nth-child(3)::before {
+    content: "Extra : ";
+  }
+  .wrapper tr > :nth-child(4)::before {
+    content: "Quantity : ";
+  }
+  .wrapper tr > :nth-child(5)::before {
+    content: "Price : ";
+  }
+  .wrapper tr > :nth-child(6)::before {
+    content: "Total : ";
+  }
+}

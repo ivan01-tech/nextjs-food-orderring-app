@@ -1,0 +1,80 @@
+.Navbar{
+	background-color: var(--primary);
+	color: white;
+	padding: 10px 30px;
+	display: flex;
+	font-weight: 500;
+	align-items: center;
+	justify-content: space-around;
+	max-height: var(--max-width-nav);
+	/* position: fixed; */
+	z-index: 1000;
+	width: 100vw;
+}
+
+.contact{
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+.contact span{
+	display: block;
+}
+
+.contact:nth-child(1){
+	display: flex;
+	gap: 10px;	
+	text-transform: uppercase;
+}
+
+.img{
+	background-color: white;
+	border-radius: 50%;
+	object-fit: contain;
+	height: 50px;
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.number{
+	font-weight: 700;
+	margin-top: -10px;
+}
+
+.list{
+	display: flex;
+	flex: .8;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: 600;
+}
+.list li{
+	list-style-type: none;
+}
+
+.card{
+	position: relative;
+	cursor: pointer;
+}
+.card span{
+	position: absolute;
+	width: 25px;
+	font-weight: 600;
+	height: 25px;
+	text-align: center;
+	right: -10px;
+	top: -10px;
+	background-color: white;
+	color: var(--primary);
+	border-radius: 50%;
+}
+
+
+
+@media screen and (max-width:500px) {
+	.list li{
+		display: none;
+	}
+}

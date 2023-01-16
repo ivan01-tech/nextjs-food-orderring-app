@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  height: calc(100vh - var(--max-height-nav));
+  padding: 3rem 0rem;
+  gap: 1rem;
+  max-width: 100vw;
+}
+
+.right {
+  flex: 1;
+}
+.right h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+.price {
+  color: var(--primary);
+  border-bottom: 1px dashed var(--primary);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.right button {
+  padding: 10px;
+  background-color: var(--primary);
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.addIngredient {
+  margin: 1rem 0rem;
+}
+.addIngredient label {
+  padding: 0.3rem;
+  font-weight: 600;
+}
+
+.sizes {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 5rem;
+}
+
+.sizes > * {
+  position: relative;
+  cursor: pointer;
+}
+
+.sizes > :nth-child(1) {
+  width: 30px;
+  height: 30px;
+}
+.sizes > :nth-child(2) {
+  width: 50px;
+  height: 50px;
+}
+.sizes > :nth-child(3) {
+  width: 70px;
+  height: 70px;
+}
+.sizes > *::after {
+  display: inline-block;
+  position: absolute;
+  content: "small";
+  color: whitesmoke;
+  padding: 1px 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: rgb(14, 117, 124);
+  border-radius: 10px;
+  top: 0px;
+}
+
+.sizes > :nth-child(1)::after {
+  content: "small";
+}
+.sizes > :nth-child(2)::after {
+  content: "meduim";
+}
+.sizes > :nth-child(3)::after {
+  content: "big";
+}
+
+.left {
+  position: relative;
+  flex: 1;
+  height: auto;
+}
+.left img {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    height: 150vh;
+    text-align: center;
+  }
+  /* .left,
+  .right {
+    flex: auto;
+    width: 100%;
+  } */
+}

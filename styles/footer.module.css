@@ -1,0 +1,55 @@
+.footer{
+	display: flex;
+	text-transform: uppercase;
+	background-color: var(--secondary);
+	color: white;
+
+}
+
+.footer li{
+	list-style-type: none;
+	padding: .5rem;
+	text-transform: capitalize;
+}
+.footer ul{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+}
+
+.left{
+	position: relative;
+	width: 30%;
+}
+
+.right{
+	flex: 1;
+	display: flex;
+	padding-top: 2rem;
+	padding-left: 3rem;
+	gap: 1rem;
+}
+
+.rightInfo{
+	flex: .7;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.title{
+	color: var(--title);
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width:500px) {
+.footer{
+	flex-direction: column;
+}
+.left{
+	width: 100%;
+	height: 400px;
+}
+	.right{
+		flex-direction: column;
+	}
+}
