@@ -1,10 +1,9 @@
-import Image from "next/image";
 import styles from "../styles/Card.module.css";
 
 import CardItem from "@/Components/CardItem";
 function CardComp() {
   return (
-    <main className={styles.wrapper}>
+    <main className={ styles.wrapper }>
       <section>
         <table>
           <thead>
